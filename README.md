@@ -1,5 +1,5 @@
 # gls-prs
-zip autocomplete\n
+zip autocomplete
 date
 printlabel
 track and trace
