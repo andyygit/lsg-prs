@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retur Epantofi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hwrap">
+        <header>
+            <div class="logo">
+                <!-- <a href="#"><img src="logo.png" alt="GLS logo"></a> -->
+                <a class="logolink" href="#"></a>
+            </div>
+            <div class="search">
+                <!-- <img src="https://via.placeholder.com/400x40" alt=""> -->
+                <a href="#">
+                    <!-- <h1>retur LPP</h1> -->
+                    <img src="./logo.png" alt="Retur Epantofi">
+                </a>
+            </div>
+        </header>
+    </div>
+    <main>
+        <form action="" method="POST" id="">
+            <!-- <div class="warning">
+                <span class="closebtn" onclick="this.parentElement.style.display = 'none';">×</span>
+                <strong>Formularul este gol.</strong>
+            </div>
+            <div class="danger">
+                <span class="closebtn" onclick="this.parentElement.style.display = 'none';">×</span>
+                <strong>Este necesar să fii de acord cu termenii și condițiile.</strong>
+            </div> -->
+            <div class="path">
+                <div class="tab active">
+                    <a title="Plasează ordinul">
+                        <div class="content">
+                            <div class="num">1</div>Place order
+                        </div>
+                    </a>
+                </div>
+                <div class="tab">
+                    <a title="Sumarul ordinului">
+                        <div class="content">
+                            <div class="num">2</div>Order summary
+                        </div>
+                    </a>
+                </div>
+                <div class="tab">
+                    <a title="Ordin de ridicare">
+                        <div class="content">
+                            <div class="num">3</div>The order
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="container flex-col">
+                <h1>New pick and return order</h1>
+                <p>If pick-up is requested on the next working day, please place your order before 18:00.<span class="help">
+                    <span class="popover">If the order is created outside the business day, the collection will not take place until the second business day from the creation date.</span>
+                </span></p>
+                <p>If the address number contains a letter, it will be moved to the <b>Address Details field</b></p>
+            </div>
+            <div class="container" id="output">
+                <div class="card">
+                    <div class="left">
+                        <h2>Return for parcel:</h2>
+                        <input type="text" name="unu" id="unu">
+                        <small style="display: block;">Enter the number of the initial package, the one issued by us, related to the order to which you register the return - you can find this number in sms or confirmation email.</small>
+                        <br><br><h2>Sender details</h2>
+                        <!-- <span class="text-danger">Ceva alertă validare</span> -->
+                        <div class="title">Sender name</div>
+                        <input type="text" name="doi" id="doi">
+                        <div class="title">Country</div>
+                        <input type="text" name="trei" id="trei" value="RO" disabled="true">
+                        <div class="title">Search address</div>
+                        <input type="text" name="keyword" id="keyword" placeholder="City, street">
+                        <div id="keywordout" style="max-width: 400px; max-height: 250px; overflow: auto;"></div>
+                        <div class="title">Zipcode</div>
+                        <input type="text" name="patru" id="patru" disabled="true">
+                        <div class="title">City</div>
+                        <input type="text" name="cinci" id="cinci" disabled="true">
+                        <div class="title">Street</div>
+                        <input type="text" name="sase" id="sase">
+                        <div class="title">Number</div>
+                        <input type="text" name="sapte" id="sapte">
+                        <div class="title">Address Details</div>
+                        <input type="text" name="opt" id="opt" placeholder="Housenumber info, entrance, etc.">
+                        <div class="title">Contact</div>
+                        <input type="text" name="noua" id="noua">
+                        <div class="title">Phone</div>
+                        <input type="text" name="zece" id="zece">
+                        <div class="title">E-mail address</div>
+                        <input type="text" name="unspe" id="unspe">
+                    </div>
+                    <div class="right">
+                        <h2>Consignee</h2>
+                        <div class="title">Service</div>
+                        <div class="value">Pick and Return</div>
+                        <div class="title">Seller</div>
+                        <div class="value">epantofi.ro</div>
+                        <div class="title">Carrier</div>
+                        <div class="value">GLS RO</div>
+                        <br><br><div class="title">Street</div>
+                        <div class="value">Soseaua Stefanesti</div>
+                        <div class="title">Housenumber</div>
+                        <div class="value">8-8A</div>
+                        <div class="title">City</div>
+                        <div class="value">Stefanestii de Jos, Ilfov</div>
+                        <div class="title">Zipcode</div>
+                        <div class="value">077175</div>
+                        <div class="title">City</div>
+                        <div class="value">RO</div>
+                        <div class="title">Phone</div>
+                        <div class="value">0371783601</div>
+                        <div class="title">E-mail</div>
+                        <div class="value">-</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card flex-col">
+                    <h3>Handover method:</h3>
+                    <p>The package will be delivered to the courier.</p>
+                </div>
+            </div>
+            <div class="container hidden" id="tos">
+                <div class="card flex-col">
+                    <div class="toss">
+                        <input type="checkbox" name="tos" id="tos-check">
+                        <div>I agree to the <a href="tos.html" target="_blank">General Terms and Conditions</a> and declare that I understand their contents, confirm that I am informed of the possibility of withdrawal from the contract and request the start of the service before the expiry of the withdrawal period</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <button class="btn white" id="cancel">Cancel</button>
+                <button class="btn right" id="next">Next</button>
+            </div>
+        </form>
+    </main>
+    <footer></footer>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retur Epantofi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hwrap">
+        <header>
+            <div class="logo">
+                <!-- <a href="#"><img src="logo.png" alt="GLS logo"></a> -->
+                <a class="logolink" href="#"></a>
+            </div>
+            <div class="search">
+                <!-- <img src="https://via.placeholder.com/400x40" alt=""> -->
+                <a href="#">
+                    <!-- <h1>retur LPP</h1> -->
+                    <img src="./logo.png" alt="Retur Epantofi">
+                </a>
+            </div>
+        </header>
+    </div>
+    <main>
+        <form action="" method="POST" id="">
+            <!-- <div class="warning">
+                <span class="closebtn" onclick="this.parentElement.style.display = 'none';">×</span>
+                <strong>Formularul este gol.</strong>
+            </div>
+            <div class="danger">
+                <span class="closebtn" onclick="this.parentElement.style.display = 'none';">×</span>
+                <strong>Este necesar să fii de acord cu termenii și condițiile.</strong>
+            </div> -->
+            <div class="path">
+                <div class="tab active">
+                    <a title="Plasează ordinul">
+                        <div class="content">
+                            <div class="num">1</div>Plasează ordinul
+                        </div>
+                    </a>
+                </div>
+                <div class="tab">
+                    <a title="Sumarul ordinului">
+                        <div class="content">
+                            <div class="num">2</div>Sumarul ordinului
+                        </div>
+                    </a>
+                </div>
+                <div class="tab">
+                    <a title="Ordin de ridicare">
+                        <div class="content">
+                            <div class="num">3</div>Ordin de ridicare
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="container flex-col">
+                <h1>Ordin nou de ridicare</h1>
+                <p>În cazul în care se solicită preluarea în următoarea zi lucrătoare, vă rugăm să faceți comanda înainte de ora 18:00.<span class="help">
+                    <span class="popover">Dacă comanda este creată în afara zilei lucrătoare, colectarea nu va avea loc decât în a doua zi lucrătoare de la data creării.</span>
+                </span></p>
+                <p>Dacă numărul din adresă conține o literă, aceasta se va trece la câmpul <b>Detalii adresă</b></p>
+            </div>
+            <div class="container" id="output">
+                <div class="card">
+                    <div class="left">
+                        <h2>Retur pentru coletul:</h2>
+                        <input type="text" name="unu" id="unu">
+                        <small style="display: block;">Introduceți numărul coletului inițial, cel emis de noi, aferent comenzii la care înregistrati returul - acest număr îl găsiti în sms sau emailul de confirmare.</small>
+                        <br><br><h2>Detalii expeditor</h2>
+                        <!-- <span class="text-danger">Ceva alertă validare</span> -->
+                        <div class="title">Nume expeditor</div>
+                        <input type="text" name="doi" id="doi">
+                        <div class="title">Țara</div>
+                        <input type="text" name="trei" id="trei" value="RO" disabled="true">
+                        <div class="title">Căutare adresă</div>
+                        <input type="text" name="keyword" id="keyword" placeholder="Localitate, Strada">
+                        <div id="keywordout" style="max-width: 400px; max-height: 250px; overflow: auto;"></div>
+                        <div class="title">Cod poștal</div>
+                        <input type="text" name="patru" id="patru" disabled="true">
+                        <div class="title">Oraș</div>
+                        <input type="text" name="cinci" id="cinci" disabled="true">
+                        <div class="title">Strada</div>
+                        <input type="text" name="sase" id="sase">
+                        <div class="title">Număr</div>
+                        <input type="text" name="sapte" id="sapte">
+                        <div class="title">Detalii adresă</div>
+                        <input type="text" name="opt" id="opt" placeholder="Litera din Numărul adresei, bloc, scară, etc.">
+                        <div class="title">Persoană contact</div>
+                        <input type="text" name="noua" id="noua">
+                        <div class="title">Telefon</div>
+                        <input type="text" name="zece" id="zece">
+                        <div class="title">Adresa e-mail</div>
+                        <input type="text" name="unspe" id="unspe">
+                    </div>
+                    <div class="right">
+                        <h2>Destinatar</h2>
+                        <div class="title">Serviciu</div>
+                        <div class="value">Retur colet</div>
+                        <div class="title">Vânzătorul</div>
+                        <div class="value">epantofi.ro</div>
+                        <div class="title">Transportator</div>
+                        <div class="value">GLS RO</div>
+                        <br><br><div class="title">Strada</div>
+                        <div class="value">Soseaua Stefanesti</div>
+                        <div class="title">Numărul casei</div>
+                        <div class="value">8-8A</div>
+                        <div class="title">Oraș</div>
+                        <div class="value">Stefanestii de Jos, Ilfov</div>
+                        <div class="title">Cod poștal</div>
+                        <div class="value">077175</div>
+                        <div class="title">Țara</div>
+                        <div class="value">RO</div>
+                        <div class="title">Telefon</div>
+                        <div class="value">0371783601</div>
+                        <div class="title">E-mail</div>
+                        <div class="value">-</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card flex-col">
+                    <h3>Metoda predare:</h3>
+                    <p>Coletul se va preda către curier.</p>
+                </div>
+            </div>
+            <div class="container hidden" id="tos">
+                <div class="card flex-col">
+                    <div class="toss">
+                        <input type="checkbox" name="tos" id="tos-check">
+                        <div>Sunt de acord cu <a href="tos.html" target="_blank">Termenii și condițiile generale</a> și declar că înțeleg conținutul acestora, confirm că sunt informat cu privire la posibilitatea retragerii din contract și solicit începerea serviciului înainte de expirarea perioadei de retragere</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <button class="btn white" id="cancel">Cancel</button>
+                <button class="btn right" id="next">Mai departe</button>
+            </div>
+        </form>
+    </main>
+    <footer></footer>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>

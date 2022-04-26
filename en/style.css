@@ -1,0 +1,345 @@
+/* Inspired by https://lpp.e-balik.cz/ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    background-color: #E7E8EE;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 2.5rem;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+header {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    /* padding: 30px 0; */
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo .logolink {
+    width: 165px;
+    height: 75px;
+    background-size: 110px 50px;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 110 50' width='165' height='75' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M95.7846 39.8693C98.5185 39.8693 100.735 37.6603 100.735 34.9354C100.735 32.2104 98.5185 30.0015 95.7846 30.0015C93.0507 30.0015 90.8345 32.2104 90.8345 34.9354C90.8345 37.6603 93.0507 39.8693 95.7846 39.8693Z' fill='%23FFD100'/%3E%3Cpath d='M25.238 23.9744V30.4299H30.6265C29.8392 31.6613 28.064 32.3174 26.8606 32.3174C22.8045 32.3174 20.7765 30.0131 20.7765 25.3631C20.7765 20.2283 23.4532 17.6008 28.7671 17.6008C30.8762 17.6008 33.635 18.126 36.5955 19.0565V11.3345C35.7431 10.9708 34.4458 10.688 32.7826 10.4041C31.0789 10.1212 29.5778 10 28.2795 10C23.0061 10 18.8284 11.4153 15.7058 14.2449C12.5821 17.0755 11 20.8758 11 25.6874C11 30.0939 12.2173 33.571 14.6507 36.1188C17.0842 38.7059 20.37 40 24.5072 40C28.6614 40 32.4786 37.851 33.7086 35.1225L33.682 39.5141H39.6914V23.9744H25.238Z' fill='%23061AB1'/%3E%3Cpath d='M42.6914 39.514V10.4849H52.0209V31.9537H62.2017V39.514H42.6914Z' fill='%23061AB1'/%3E%3Cpath d='M65.606 38.7867V30.8627C66.9854 31.3072 68.6081 31.6709 70.4334 31.9952C72.2588 32.3184 73.8409 32.4801 75.1798 32.4801C77.451 32.4801 78.6278 31.9144 78.6278 30.9031C78.6278 30.2566 78.2629 29.9323 76.5997 29.5686L73.3544 28.8413C67.7973 27.5876 65.2017 24.7985 65.2017 20.0677C65.2017 16.9542 66.2973 14.4884 68.447 12.669C70.5945 10.889 73.5966 10 77.3689 10C79.9645 10 83.9406 10.5253 86.374 11.1325V18.6928C85.1162 18.3695 83.6163 18.0463 81.7909 17.7624C79.9656 17.4795 78.5456 17.3583 77.4916 17.3583C75.5041 17.3583 74.3679 17.924 74.3679 18.9352C74.3679 19.5413 74.8949 19.9465 75.9905 20.2293L79.7629 21.1183C85.2795 22.4124 87.8345 25.2419 87.8345 30.0535C87.8345 33.1266 86.6984 35.552 84.4676 37.331C82.2369 39.11 79.1537 39.9989 75.2192 39.9989C71.4874 39.9989 67.7151 39.4736 65.606 38.7867Z' fill='%23061AB1'/%3E%3C/svg%3E") transparent no-repeat center;
+}
+
+header .search {
+    margin-left: auto;
+}
+
+header .search h1 {
+    margin: 0;
+    font-size: 4.8rem;
+    color: #172154;
+}
+
+#output:empty {
+    min-height: 30px;
+    margin-top: 2.5rem;
+    background-image: linear-gradient(90deg, #88888800 0%, #CCCCCC, #88888800 98%);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    animation: loader .8s infinite linear;
+}
+
+@keyframes loader {
+    0% {
+        background-position: -200%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+.container {
+    display: flex;
+}
+
+.path, .container, .warning, .danger {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+    header, .warning, .danger, .container {
+        margin: 0 20px;
+    }
+}
+
+.btn {
+    margin: 30px 0;
+    padding: 16px 45px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #6B1544;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.btn.white {
+    background-color: #fff;
+    color: #172154;
+}
+
+.hwrap {
+    background-color: #fff;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.help {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.2em;
+    border-radius: 50%;
+    background-color: #6B1544;
+    vertical-align: top;
+}
+
+.help::after {
+    content: '?';
+    position: relative;
+    top: -14%;
+    left: 28%;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.help .popover {
+    display: block;
+    transform: scale(0);
+    transition: 200ms ease-in-out;
+    position: absolute;
+    top: -70px;
+    left: 15px;
+    width: 300px;
+    border: solid 2px #6B1544;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.help .popover.active {
+    transform: scale(1);
+}
+
+.warning, .danger {
+    margin-top: 1rem;
+    border: 1px solid;
+    padding: 1.5rem 1rem 1.5rem 2rem;
+}
+
+.warning {
+    background-color: #FEEFB3;
+    color: #9F6000;
+}
+
+.danger {
+    background-color: #FFBABA;
+    color: #D8000C;
+}
+
+.warning .closebtn, .danger .closebtn {
+    float: right;
+    margin-right: 1.5rem;
+    color: #404040;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 2rem;
+    cursor: pointer;
+}
+
+.path {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.path .tab {
+    position: relative;
+    width: 33.33%;
+    margin: 0 15px;
+    display: flex;
+    /* justify-content: center; */
+    padding: 5px 5px 5px 35px;
+    background-color: #fff;
+    color: #172154;
+}
+
+.path .tab.active, .path .tab:hover {
+    background-color: #172154;
+    color: #fff;
+}
+
+.path .tab.active::after, .path .tab:hover::after {
+    border-left: 29.5px solid #172154;
+}
+
+.path .tab.active a, .path .tab:hover a{
+    color: #fff;
+}
+
+.path .tab.active .content .num, .path .tab:hover .content .num {
+    background-color: #fff;
+    color: #172154;
+}
+
+.path .tab::after {
+    position: absolute;
+    top: 0;
+    right: -29px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 29.5px solid transparent;
+    border-bottom: 29.5px solid transparent;
+    border-left: 29.5px solid #fff;
+}
+
+.path .tab::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 29.5px solid transparent;
+    border-bottom: 29.5px solid transparent;
+    border-left: 29.5px solid #E7E8EE;
+}
+
+.path .tab a {
+    display: block;
+    text-decoration: none;
+    color: #172154;
+    cursor: pointer;
+}
+
+.path .tab .content {
+    display: flex;
+    padding: 8px 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.path .tab .content .num {
+    margin-right: 15px;
+    padding: 2px 10px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #172154;
+    color: #fff;
+}
+
+.card {
+    display: flex;
+    margin-top: 2.5rem;
+    flex: 0 1 100%;
+    background-color: #fff;
+    color: #172154;
+    box-shadow: 3px 3px 18px 0px rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    padding: 2rem 3rem;
+}
+
+.card .title {
+    margin: .4rem 0 .4rem 0;
+}
+
+.card .left, .card .right {
+    flex: 1 1 50%;
+    padding: 0 1rem;
+}
+
+.card .left h2, .card .right h2 {
+    margin: 0 0 1.5rem 0;
+    text-indent: .5rem;
+}
+
+.card .left input, .card .right input, .card .left .value, .card .right .value {
+    display: block;
+    width: 100%;
+    border: 1px #C0C0C0 solid;
+    border-radius: 5px;
+    padding: .5rem .8rem;
+    color: #555555;
+    font-size: 1.5rem;
+}
+
+.card .left .value, .card .right .value {
+    /* line-height: 1.7rem; */
+    background-color: #f2f2f2;
+}
+
+.card .left #keywordout ul li {
+    padding: 3px 0;
+    cursor: pointer;
+}
+
+.card .left #keywordout ul li:hover {
+    background-color: #f2f2f2;
+}
+
+.card .text-danger {
+    color: #ff0000;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.card .toss {
+    display: flex;
+    align-items: baseline;
+}
+
+.card .toss input[type=checkbox]{
+    margin-right: 1.2rem;
+}
+
+.tos {
+    margin-bottom: 60px;
+    padding: 4rem;
+    background-color: #172154;
+    color: #fff;
+    text-align: center;
+    line-height: 1rem;
+}
