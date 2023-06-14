@@ -1,2 +1,2 @@
-# slgs-prs
+# slg-prs
 -----------
