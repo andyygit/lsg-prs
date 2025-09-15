@@ -8,7 +8,7 @@ class DB {
             $_count;
     private function __construct() {
         try {
-            $this->_pdo = new PDO('mysql:host=localhost;dbname=retur', 'retur', 'wVH^k4SnG/');
+            $this->_pdo = new PDO('mysql:host=localhost;dbname=?', '?', '?');
             $this->_pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->_pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         } catch (PDOException $e) {
@@ -81,4 +81,5 @@ if (isset($_POST['colet'])) {
             'msg' => 'Pentru acest colet există ordin de ridicare creat!'
         ));
     }
+
 }
